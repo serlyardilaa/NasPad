@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php
         $query = mysqli_query($config, "SELECT logo from tbl_instansi");
@@ -39,7 +41,7 @@
             <div class="col s12 m6 offset-m3 offset-m3">
                 <div class="card-panel z-depth-2" id="login">
                     <!-- Row Form START -->
-                    <div class="row">
+                    <div class="row mt-5">
 
                     <?php
                         $query = mysqli_query($config, "SELECT * FROM tbl_instansi");
@@ -98,7 +100,7 @@
                     ?>
 
                     <!-- Form START -->
-                    <form class="col s12 m12 offset-4 offset-4" method="POST" action="" >
+                    <form class="col" method="POST" action="" >
                         <div class="row">
                             <?php
                                 if(isset($_SESSION['errLog'])){
@@ -115,25 +117,31 @@
                                 }
                             ?>
                         </div>
-                        <div class="input-div one">
-                            <div class="i">
-                                <i class="fas fa-user"></i>
+                            <div class="row">
+                                <div class="form-group w-50 mt-3 mx-auto">
+                                    <!-- <label for="username">Username</label> -->
+                                    <div class="input-group">
+                                        <input id="username" type="text" class="form-control" name="username" placeholder="Username" required>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="div">
-                                <h5>Username</h5>
-                                <input id="username" type="text" class="input" name="username" required>
-                            </div>
-                        </div>
-                        <div class="input-div pass">
-                            <div class="i">
+                                <!-- <td>
+                                    <div class="i">
+                                    <i class="fas fa-user"></i>
+                                    </div>
+                                </td> -->
+
+                        
+                        <div class="row">
+                            <!-- <div class="i">
                                 <i class="fas fa-lock"></i>
+                            </div> -->
+                            <div class="mx-auto form-group w-50 mt-3">
+                                <!-- <h5>Password</h5> -->
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
                             </div>
-                            <div class="div">
-                                <h5>Password</h5>
-                                <input id="password" type="password" class="input" name="password" required>
-                            </div>
-                        <div class="input-field col s12">
-                            <button type="submit" class="btn" name="submit">MASUK</button>
+                        <div class="row mt-5 mx-auto">
+                            <button type="submit" class="btn btn-success w-50 rounded-pill mx-auto" name="submit">MASUK</button>
                         </div>
                     </form>
                     <!-- Form END -->
