@@ -37,15 +37,18 @@ body{
 	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
+	margin-top: 15px;
 }
 
 .img img{
 	width: 500px;
 }
 
-form{
+form {
 	width: 360px;
 	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .login-content img{
@@ -83,7 +86,7 @@ form{
 	transition: .3s;
 }
 
-.input-div > div{
+ /* .input-div > div{
     position: relative;
 	height: 45px;
 }
@@ -146,7 +149,15 @@ form{
 
 .input-div.pass{
 	margin-bottom: 4px;
+} */
+
+.btn-success {
+	background-color: #30AADD !important;
+	border: none !important;
 }
+ .btn-success:hover {
+	opacity: 0.9;
+ }
 
 a{
 	display: block;
@@ -219,5 +230,10 @@ a:hover{
 
 	.login-content{
 		justify-content: center;
+	}
+
+	.icon-user {
+		display: block;
+		margin-left: 20px;
 	}
 }
